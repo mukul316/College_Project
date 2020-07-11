@@ -1,4 +1,12 @@
+body {
+    background-color:#CDEEE9 ;
+}
 
+.first_div{
+ text-align:end;
+padding-right:30px;
+    padding-top: 10px;
+}
 .top_div{
     display: grid;
     grid-template-columns: 1fr 2fr;    
@@ -38,8 +46,10 @@ html
     text-decoration-line: underline;
     color: black;
    /* border-bottom: 1px solid; */
-    letter-spacing: 2px
+    letter-spacing: 2px;
+    text-shadow:1px 0px 0px #ccc; 
 }
+
 
 .all_border
 {
@@ -48,6 +58,14 @@ html
 
 .top_image{
  width: 400px; 
+    border:2px solid #fff;
+  background: url(img/tiger.png) no-repeat;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-border-radius:25px;
+  -webkit-border-radius:25px;
+  border-radius:25px;
     
 }
 /*** Middle page styleing ***/
@@ -252,4 +270,16 @@ footer {
   padding: 3px;
   background-color: gray;
   color: white;
+}
+.animate__animated.animate__flash {
+ animation-duration: 4s;
+    
+}
+.animate__animated.animate__bounce
+{
+ animation-delay: .08s;
+}
+
+.location_div{
+margin-left: 350px;
 }

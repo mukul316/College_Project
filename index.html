@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
       
       
 <link rel="stylesheet" type="text/css"  href="style.css">
@@ -13,20 +15,25 @@
   
      
 
-    <title>Landing page</title>
+    <title>Easy Furniture</title>
   </head>
   <body>
        <!-- Header -->
+       <div class="first_div">
+              <button type="button" class="btn btn-primary btn-sm animate__animated animate__flash">Sign In</button>
+              <button type="button" class="btn btn-secondary btn-sm animate__animated animate__flash">Sign Up</button>
+              </div>
       <div class="top_div"> 
-          <div class="zone"> <img src="companyimage.jpg" class="top_image">
+          <div class="zone animate__animated animate__bounceInDown"> <img src="companyimage.jpg" class="top_image">
           </div>
-          <div class="zone_nav"> 
+          
+          <div class="zone_nav animate__animated animate__lightSpeedInRight" > 
               <ul class="nav justify-content-center nav_bar_text_style">
                   <li class="nav-item">
-    <a class="nav-link active" href="#about">About</a>
+    <a class="nav-link " href="#about" >About</a>
     </li>
   <li class="nav-item">
-    <a class="nav-link" href="#ourwork">portfilio</a>
+    <a class="nav-link" href="#ct">Catalouge</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#team">Team</a>
@@ -40,7 +47,7 @@
 
       <!--Middle ---->
       
-      <div class="ourwork" id="ourwork"> Our work 
+      <div class="ourwork" id="ct"> Our work 
       <p>Our portfolio is the best way to show our work, you can see here a big range of our work. Check them all and you will find what you are looking for.</p>
       </div>
       <div class="middle_images_div"> 
@@ -48,14 +55,14 @@
           </div>    
           <div class="zone"> <img src="images/OfficeImage2.jpg" class="middle_images"> 
           </div>
-          <div class="zone"> <img src="images/OfficeImage2.jpg" class="middle_images">
+          <div class="zone"> <img src="images/OfficeImage2.jpg" class="middle_images"> 
           </div>
-          <div class="zone"> <img src="images/OfficeImage2.jpg" class="middle_images">
+          <div class="zone"> <img src="images/OfficeImage2.jpg" class="middle_images"> 
           </div>
           
       </div>
       <!-- about --->
-      <div class="about_div" id=about>
+      <div class="about_div animate__flash" id=about>
           <H2>ABOUT</H2>
       </div>
       <div class="about_below_div">
@@ -110,18 +117,23 @@
       <form action="#">
   <input type="name" placeholder="Enter your name">
           <input type="email" placeholder="Enter your email">
-          <label for="story">Tell us your query:</label>
+          <label for="story" style="margin-left: 15px;">Tell us your query:</label>
           
           <textarea id="story" name="story"
           rows="5" cols="33">
           </textarea>
           <input type="submit" placeholder="Click here to submit">
 </form>
+       <div class="Contact_Div" >
+          <h2>Location</h2>
+                </div>
+      <div class="location_div"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2647.734485778323!2d-89.25116568481539!3d48.42324153920118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d592191b087b243%3A0xc3c84ebab646161b!2s94%20Beaver%20Ct%2C%20Thunder%20Bay%2C%20ON%20P7B%204J7!5e0!3m2!1sen!2sca!4v1594429462399!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:1px solid blue;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
       
       <footer>
   <p>Author: Mukul Sharma<br>
   <a href="mukul sharma">mukul sharma</a></p>
 </footer>
+     
 
       
       
