@@ -64,36 +64,38 @@ input[type=submit]:hover {
 <div><h3>Customer Service Request </h3></div>
 
 <div class="container" >
-  <form action="/action_page.php">
-    <label for="fname"><h6>First Name</h6></label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
+  <form action="file:///C:/Users/kiran/OneDrive/Documents/GitHub/College_Project/Customer%20service/Thank%20you%20page.html" method="post" action="/../contact" name="form_contact" onSubmit="alert('Thank you for your Contacting us');">
+    
+    <label for="fname"><b>First Name</b></label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." class="form-control input-md" required>
+    
     <label for="lname"><h6>Last Name</h6></label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required >
 
     <label for="Email-id"><h6>Email-id</h6> </label>
-    <input type="text" id="Email-id" name="Email-id" placeholder="Email-id">
+    <input type="text" id="Email-id" name="Email-id" placeholder="Email-id" class="form-control input-md" required>
 
     <label for="phonenumber"><h6>Phone Number</h6></label>
-    <input type="text" id="phonenumber" name="phonenumber" placeholder="Phonenumber">
+    <input type="text" id="phonenumber" name="phonenumber" placeholder="Phonenumber"class="form-control input-md" required>
 
     <label for="Issue"><h6>Issue Related to</h6></label>
-    <select id="Issue" name="Issue">
+    <select id="Issue" name="Issue" class="form-control input-md" required>
       <option value="australia">Office Furntiure</option>
       <option value="canada">Living Furniture</option>
       <option value="usa">Bedroom furniture</option>
     </select>
 
     <label for="subject"><h6>Message</h6></label>
-    <textarea id="subject" name="subject" placeholder="Write your Issue.." style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write your Issue.." required style="height:200px"></textarea>
 
-    <button type="button" onclick="alert('Form has been submitted')" a href="file:///C:/Users/kiran/OneDrive/Documents/GitHub/Rand/Customer%20service/Thank%20you%20page.html">Submit</button>
- 
+    
+    <input type="submit" value="Submit" >
 
    
 
   </form>
 </div>
+
 
 </body>
 </html>
