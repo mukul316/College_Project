@@ -1,6 +1,9 @@
 body {
     background-color:#CDEEE9 ;
 }
+.topnav .search-container {
+  float: right;
+}
 
 .first_div{
  text-align:end;
@@ -17,6 +20,29 @@ padding-right:30px;
      
 }
 
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
 .zone {
     cursor:pointer;
     text-align: center;
