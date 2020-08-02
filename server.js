@@ -31,7 +31,7 @@ const db= {
     password:'mm'
 },
 {
-    name: 'love',
+    name: 'frnd',
  lastname:'jyotika'
 }
 ]
