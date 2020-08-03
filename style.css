@@ -161,7 +161,7 @@ p{
     margin-left: 0px;
     background-color:rgb(240,240,240);
 }
-div_a
+.div_a
 {
   background-color:rgb(240,240,240);  
 }
@@ -271,11 +271,11 @@ button {
   background: hsl(130, 75%, 75%); 
 }
 
-label,
+/*label,
 textarea {
     font-size: .8rem;
     letter-spacing: 1px;
-}
+}*/
 textarea {
     padding: 10px;
     line-height: 1.5;

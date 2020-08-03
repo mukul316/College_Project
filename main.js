@@ -63,5 +63,35 @@ $(document).ready(function(){
         })
         
         
-    });    
+    }); 
+    $(document).find("#loginButton").on("click",function(){
+       var user = {email:$("#loginEmail").val(), password:$("#loginpwd").val()};
+        $.ajax({
+            type:'POST',
+            url:'/login',
+            data:user,
+            datatype:'json',
+            success:function(user_p){
+                alert('succesfully User inserted');
+            },
+            
+        })
+        
+        
+    });   
+    $(document).find("#SignButton").on("click",function(){
+       var user = {firstname:$("#FirstnameSignup").val(),lastname:$("#LastnameSignup").val(),email:$("#EmailSingup").val(), password:$("#PwdSignup").val(),age:$("#AgeSignup").val()};
+        $.ajax({
+            type:'POST',
+            url:'/CreateUser',
+            data:user,
+            datatype:'json',
+            success:function(user_p){
+                alert('succesfully user data inserted');
+            },
+            
+        })
+        
+        
+    });     
 })

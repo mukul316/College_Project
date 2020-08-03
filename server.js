@@ -23,20 +23,6 @@ connection.connect((err) => {
 });
 
 
-const db= {
-    users :[
-        { id:'1',
-            name: 'mukul',
-    lastname: 'sharma',
-    password:'mm'
-},
-{
-    name: 'frnd',
- lastname:'jyotika'
-}
-]
-}
-
 app.get('/',(req,res)=> {
     
     res.json(index.html);
@@ -66,16 +52,10 @@ connection.query('SELECT * from mydb_rest.users ', (err, rows) => {
 (app.use(express.static(__dirname + '/Public')))
 app.post('/CreateUser',(req,res)=> {
    
-    const fname=req.body.fname;
-    const lname=req.body.lname;
-    const age=req.body.lname;
-     values=[[,req.body.fname,req.body.lname,req.body.age]];
-    console.log(fname);
-     console.log(lname);
-     console.log(age);
+    values=[[,req.body.firstname,req.body.lastname,req.body.age,req.body.email,req.body.password]];
+    
 
-
-connection.query('INSERT INTO mydb_rest.users(id,firstname,lastname,age) VALUES ?',[values], (err, rows) => {
+connection.query('INSERT INTO mydb_rest.users(id,firstname,lastname,age,password,email) VALUES ?',[values], (err, rows) => {
         if(err) throw err;
         console.log('The data from users table are: \n', rows);
        res.json(rows);
@@ -114,7 +94,18 @@ connection.query('INSERT INTO mydb_rest.ContactUsers(Personid,Firstname,email,te
 })
 
 
+app.post('/login',(req,res)=> {
+   
+    var values=[[req.body.email,req.body.password]];
 
+
+    connection.query('SELECT * from mydb_rest.users where email="'+req.body.email+'" and password="'+req.body.password+'"', (err, rows) => {
+        if(err) throw err;
+        console.log('The data from users table are: \n', rows);
+       res.json({status:true, message:"Login successfull", data:rows});
+    });
+
+})
 
 app.post('/register',(req,res)=> {
     const {name,lastname,password}=req.body;
