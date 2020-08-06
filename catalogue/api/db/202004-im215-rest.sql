@@ -1,0 +1,1 @@
+SELECT * FROM `202004-im215-rest`.users;

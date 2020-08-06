@@ -7,9 +7,9 @@ function getNewConnection() {
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'password',
-    database: 'IM215',
-    
+    password: '123456',
+    database: '202004-im215-rest',
+    multipleStatements: true,
     } )
 
 }
@@ -26,8 +26,14 @@ router.get("/", (req, res) => {
     }
     res.json(person)
 })
+
+// 
+
+
+
+
 //return list of users 
-router.get('/user', (req, res) => {
+router.get('/users', (req, res) => {
 const connection = getNewConnection();
 const queryString = 'Select * FROM users'
 
@@ -48,8 +54,12 @@ console.log('Defined and callback')
 
 //create a user
 
-router.post('/user', (req, res) => {
-    console.log(req.body)
+router.post('/users', (req, res) => {
+    const connection = getNewConnection();
+    const user= req.body;
+const queryString = 'insert into users value  (NULL, ${users.first_name},${user.last_name}, ${user.age},${user.email-id},${user.subject})'
+console.log(queryString)
+    
     console.log(req.first_name)
           res.end()
 })
@@ -57,15 +67,57 @@ router.post('/user', (req, res) => {
 
 //update user
 
-router.patch('/user', (req, res) => {
+router.patch('/users', (req, res) => {
     console.log('from patch')
     console.log(req.body)
     console.log(req.first_name)
           res.end()
 })
-router.post("/user", (req, res) => {
+router.post("/users", (req, res) => {
     console.log(req.query)
           res.end()
+})
+
+
+// delete a user 
+
+router.delete('/users', (req, resp) => {
+    const connection = getNewConnection()
+    const queryString = 'delete from users where id = ${req.params.id}'
+  
+    connection.query(queryString, (err, res, fields) => {
+      console.log('Got Response from Database Server')
+      if (err != null) {
+        console.error(err);
+        res.sendStatus(500);
+      }
+  
+      console.log(res)
+      if (res.affectedRows == 0) {
+        res.sendStatus(404)
+      }
+  
+      res.end();
+    })
+  })
+//Get user
+router.get('/users/:id', (request, response) => {
+    const connection = getNewConnection()
+    const queryString = `select * from users where id = ${request.params.id}`
+  
+    connection.query(queryString, (err, rows, fields) => {
+      console.log('Got Response from Database Server')
+      if (err != null) {
+        console.error(err);
+        response.sendStatus(500);
+      }
+  
+      if (rows.length == 0) {
+        response.sendStatus(404)
+      }
+  
+      response.json(rows[0])
+    })
 })
 
 module.exports= router;
