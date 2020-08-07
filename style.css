@@ -1,6 +1,9 @@
 body {
     background-color:#CDEEE9 ;
 }
+.topnav .search-container {
+  float: right;
+}
 
 .first_div{
  text-align:end;
@@ -17,6 +20,29 @@ padding-right:30px;
      
 }
 
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
 .zone {
     cursor:pointer;
     text-align: center;
@@ -135,7 +161,7 @@ p{
     margin-left: 0px;
     background-color:rgb(240,240,240);
 }
-div_a
+.div_a
 {
   background-color:rgb(240,240,240);  
 }
@@ -245,11 +271,11 @@ button {
   background: hsl(130, 75%, 75%); 
 }
 
-label,
+/*label,
 textarea {
     font-size: .8rem;
     letter-spacing: 1px;
-}
+}*/
 textarea {
     padding: 10px;
     line-height: 1.5;
