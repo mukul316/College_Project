@@ -1,0 +1,298 @@
+body {
+    background-color:#CDEEE9 ;
+}
+
+.top_div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;    
+    grid-template-rows:1fr;
+    grid-gap: 100px;
+    /*border: 2px solid blue;*/
+    margin: 40px;
+     
+}
+
+.zone {
+    cursor:pointer;
+    text-align: center;
+    border-radius:4px;
+    /*border:1px solid red;*/
+    transition: transform 0.3s;
+    
+}
+
+html
+{
+    scroll-behavior: smooth;
+    
+}
+.zone_nav {
+    cursor:pointer;
+    text-align: center;
+    border-radius:4px;
+   /* border:1px solid red;*/
+    margin-top: 100px;
+    
+}
+
+.nav_bar_text_style{
+    font-family:"Roboto",sans-serif;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    color: black;
+   /* border-bottom: 1px solid; */
+    letter-spacing: 2px
+}
+
+.all_border
+{
+   /* border: 2px solid red;*/
+}
+
+.top_image{
+ width: 400px; 
+    
+}
+/*** Middle page styleing ***/
+
+.ourwork
+{
+    display: block;
+    /*border:2px solid green;*/
+    text-align: center;
+    font-family: "Raleway",sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #232323;
+    font-weight: 200;
+    text-transform: uppercase;
+    
+}
+p{
+    font-size: 18px;
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: 100;
+}
+.middle_images_div
+{
+    display: grid;
+    grid-template-columns: 600px 600px ;
+    grid-template-rows: 1fr;
+   /* border: 2px solid blue;*/
+    grid-gap:1px;
+    margin:70px;
+    margin-left: 60px;
+    
+}
+
+.zone:hover{
+    transform: scale(1.1) rotate(0.01deg);
+}
+.middle_images
+{
+      width: 500px;    
+}
+
+/****** about style ****/
+
+.about_div
+{
+    display: grid;
+    grid-template-columns: 100%;
+    /*border: 2px solid blue;*/
+    text-align:center; 
+    background-color:rgb(240,240,240);
+     font-family: "Raleway",sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #232323;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.about_below_div
+{
+    display: grid;
+    grid-template-columns: 40% 50%;
+   /* border:2px solid blue; */
+    grid-gap:100px;
+    margin-top: 40px;
+    margin-left: 0px;
+    background-color:rgb(240,240,240);
+}
+div_a
+{
+  background-color:rgb(240,240,240);  
+}
+.p_below_about
+{
+    margin-left: 100px;
+    font-weight: 100;
+}
+
+.OurTeam_Div
+{
+    display: grid;
+    grid-template-columns: 100%;
+   /* border: 2px solid blue;*/
+    text-align:center;
+    margin-top:50px;
+     font-family: "Raleway",sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #232323;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.OurTeamBelow_Div
+{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+    /*border:2px solid blue;*/
+    grid-gap: 5px;
+    margin-top: 30px;
+    
+    
+}
+
+
+{
+    font-size: 25px;
+    font-weight: 300;
+    margin: 30px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px
+}
+
+
+.TeamImages
+{    
+      width: 200px;    
+}
+
+.Contact_Div
+{
+    display: grid;
+    grid-template-columns: 100%;
+   /* border: 2px solid blue;*/
+    text-align:center;
+    margin-top:50px;
+     font-family: "Raleway",sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+    color: #232323;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.Contact_below_Div
+{
+    display: grid;
+    grid-template-columns: 100%;
+    /*border: 2px solid blue;*/
+    text-align:center;
+    margin-top:50px;
+    font-family: "Roboto",sans-serif;
+    font-size: 4px;
+    color: black;
+    font-weight: 100;
+}
+
+
+/* Form css */
+
+
+input, button {
+  font: inherit;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+form {
+  display: grid; 
+  grid-template-columns: 200px 200px;
+  grid-column: 1;
+  justify-content: center;
+    grid-gap: 40px;
+    margin-bottom: 20px;
+    
+}
+
+input {
+  padding: 0.5em 0.75em;
+}
+
+button {
+  padding: 0.5em 0.75em;
+  background: hsl(130, 75%, 75%); 
+}
+
+label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+ /***footer ***/
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: gray;
+  color: white;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 25px;
+  font-size:15px;
+}
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+}
+
